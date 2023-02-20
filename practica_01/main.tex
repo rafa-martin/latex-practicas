@@ -1,0 +1,98 @@
+\documentclass[a4paper,11pt]{article}
+
+%% Packages
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+%% Document
+\begin{document}
+
+\title{Teoría matemática de la relatividad general}
+\author{Juan Belmonte Beitia}
+\date{}
+
+\maketitle
+
+\begin{abstract}
+El objetivo de este trabajo de investigación es introducir al lector en algunos
+conceptos matemáticos usados en la investigación sobre relatividad
+general, como son conceptos fundamentales de la \textbf{geometría diferencial},
+el \textbf{cálculo sobre variedades} y el \textbf{álgebra tensorial}.
+\end{abstract}
+
+\section{Introducción}
+En relatividad general, los objetos básicos que intervienen en una descripción
+relativista de un modelo de universo son:
+
+\begin{itemize}
+\item Una \textit{variedad pseudoriemanniana}, $(\mathcal{M}, g)$ de cuatro dimensiones 
+que modeliza la geometría del espacio tiempo. Aquí $g$ designa el tensor métrico y
+$\mathcal{M}$ es la variedad diferenciable.
+
+\item Los \textit{tensores} que son aplicaciones lineales definidas sobre los espacios
+vectoriales tangentes y cotangentes en cada punto del espacio-tiempo. Dentro
+de los tensores básicos que aparecen en la teoría de la relatividad general
+están:
+\begin{itemize}
+\item El tensor energía-impulso, que da una descripción del tipo de materia
+del que está lleno un universo, de sus propiedades básicas así como
+de su distribución.
+\item Los tensores de curvatura, que se pueden cálcular a partir de las
+derivadas covariantes de la métrica.
+\end{itemize}
+
+\item El conjunto de observadores físicamente admisibles puede definirse como
+el conjunto de posibles sístemas de coordenadas sobre la variedad espacio-tiempo.
+\end{itemize}
+
+\section{El tensor métrico}
+El tensor métrico es el objeto matemético que permite calcular distancias
+y otros conceptos métricos en relatividad general. Una vez especificado un 
+sistema de coordenadas, el tensor métrico se representa mediante un conjunto
+de funciones $g_{ij}$ , llamadas coeficicientes del tensor métrico:
+\begin{equation}
+\label{eq:metric}
+g = \sum_{i,j=1}^n g_{ij}\ dx^i\otimes dx^i
+\end{equation}
+
+\noindent
+Usando el convenio de suma de Einstein, la ecuación \eqref{eq:metric} se escribe como
+$$
+ds^2 = g_{ij} dx^i dx^j
+$$
+
+\noindent
+El tensor métrico en el espacio de Minkowsky, expresado en coordenadas 
+cartesianas, tiene como componentes $g_{ij}$ la siguiente matriz
+$$
+\begin{pmatrix}
+-1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{pmatrix}
+$$
+
+\noindent
+Por otro lado, el hecho de que el espacio tiempo sea curvo hace que en cada
+punto del espacio, los espacios vectoriales tangentes no coincidan, y por tanto al
+derivar una magnitud tensorial es necesario tener en cuenta tanto la variación
+de las componentes como de la base vectorial al cambiar de un punto a otro del
+espacio. De esta forma, surge la definición de derivada covariante:
+\begin{equation}
+\label{eq:covariant}
+\nabla_{\alpha} v = \nabla_{\alpha} (v^{\beta} e_{\beta}) = (\nabla_{\alpha}v^{\beta})e_{\beta} + v^{\beta}(\Gamma^{\gamma}_{\alpha \beta}e_{\gamma})
+\end{equation}
+
+\noindent
+donde los coeficientes $\Gamma^{\gamma}_{\alpha \beta}$ son los llamados 
+símbolos de Christoffel. Usando \eqref{eq:covariant} y el tensor de curvatura 
+de Riemann, llegamos al siguiente sistema de ecuaciones:
+\begin{eqnarray}
+\nabla_{\alpha} \phi &=& \partial_{\alpha} \phi \label{eq:eq_01} \\
+\nabla_{\alpha} v    &=& (\partial_{\alpha} V^{\gamma} + \Gamma_{\alpha \beta}^\gamma v^{\beta})e_{\gamma}  \label{eq:eq_02}
+\end{eqnarray}
+
+
+\end{document}
