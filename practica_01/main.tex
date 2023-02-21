@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %% Packages
 \usepackage[spanish]{babel}
@@ -94,5 +94,41 @@ de Riemann, llegamos al siguiente sistema de ecuaciones:
 \nabla_{\alpha} v    &=& (\partial_{\alpha} V^{\gamma} + \Gamma_{\alpha \beta}^\gamma v^{\beta})e_{\gamma}  \label{eq:eq_02}
 \end{eqnarray}
 
+
+\subsection{La ecuación de las geodésicas}
+Puede demostrarse que una curva que pasa por $x(0) = x_0$ y que en ese punto
+tiene un vector tangente v es geodésica si cumple la condición:
+\begin{equation}
+\begin{split}
+\frac{d^2x^\mu}{ds^2} + \gamma^\mu_{\sigma \nu} \frac{dx^\sigma}{ds} \frac{dx^\nu}{ds} = 0 \\
+x(0) = x_0 , x_s(0) = v
+\end{split}
+\end{equation}
+
+En relatividad el cálculo de las geodésicas es importante para determinar como
+se está moviendo globalmente la materia en un espacio-tiempo.
+
+\section{Tensor de Riemann o tensor de curvatura}
+El tensor de curvatura se define como un tensor una vez contravariante, tres
+veces covariante y viene dado, en una base natural, como
+
+\begin{equation}
+\label{eq:riemann01}
+R^\rho_{\sigma \mu \nu } = \partial_\mu \Gamma^\rho_{\nu \sigma} - \partial_\nu \Gamma^\rho_{\mu \sigma} + \Gamma^\rho_{\mu \lambda} \Gamma^\lambda_{\nu \sigma} - \Gamma^\rho_{\nu \lambda} \Gamma^\lambda_{\mu \sigma}
+\end{equation}
+
+Usando \eqref{eq:riemann01} es fácil comprobar que
+\begin{eqnarray*}
+R_{abcd} = -R_{bacd} &=& -R_{abdc} , \\
+            R_{abcd} &=& R_{cdab} , \\
+            R_{a\left[bcd\right]} &=& 0
+\end{eqnarray*}
+
+De esta forma \dots
+
+\section{Conclusiones}
+En este trabajo de investigación, se ha pretendido exponer los conceptos
+matemáticos más relevantes en la teoría general de la relatividad. Se han
+introducido los conceptos básicos de \dots
 
 \end{document}
